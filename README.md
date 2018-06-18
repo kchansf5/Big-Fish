@@ -15,6 +15,8 @@ In Big Fish, players will be able to:
 
 ### Wireframes
 
+![wireframe](https://github.com/kchansf5/big-fish/blob/master/big_fish_wireframe-01.png)
+
 Big Fish will be played on a single screen with side menus that are toggled when a player clicks on the menu button. The main buttons/menu options available to the player will include:
 
 - How-to-Play
