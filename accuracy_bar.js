@@ -1,25 +1,25 @@
-document.addEventListener("DOMContentLoaded", function(){
-  const canvasEl = document.getElementById("game-canvas");
-  canvasEl.width = 500;
-  canvasEl.height = 500;
-
-  const red = canvasEl.getContext("2d");
-  red.fillStyle = "red";
-  red.fillRect(0, 50, 500, 50);
-
-  const yellow = canvasEl.getContext("2d");
-  yellow.fillStyle = "yellow";
-  yellow.fillRect(75, 50, 350, 50);
-
-  const green = canvasEl.getContext("2d");
-  green.fillStyle = "green";
-  green.fillRect(200, 50, 125, 50);
-
-  const bar = canvasEl.getContext("2d");
-  bar.fillStyle = "gray";
-  bar.strokeStyle = "blue";
-  bar.lineWidth = 2;
-  bar.fillRect(100, 45, 10, 65);
-  bar.strokeRect(100, 45, 10, 65);
-
-});
+// const canvas2 = document.getElementById('bar');
+// const c2 = canvas.getContext('2d');
+//
+//
+// //
+// // c.fillStyle="#f2f2f2";
+// // c.fillRect(15, 5, 10, 40);
+// // c.strokeStyle="#000000";
+// // c.strokeRect(10, 10, 370, 30);
+//
+// let x = 15;
+// let dx = 1;
+//
+// function animate() {
+//   requestAnimationFrame(animate);
+//   c2.clearRect(0, 0, innerWidth, innerHeight);
+//   c2.fillStyle="#f2f2f2";
+//   c2.fillRect(x, 0, 10, 50);
+//   c2.strokeStyle="black";
+//   c2.strokeRect(x, 0, 10, 50);
+//
+//   x += dx;
+// }
+//
+// animate();

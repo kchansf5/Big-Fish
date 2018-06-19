@@ -9,7 +9,7 @@ const green = "#50ff35";
 const yellow = "#f2f241";
 const red = "#ff3434";
 
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("bar-bg");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -32,14 +32,42 @@ c.fillRect(10, 10, 370, 30);
 c.strokeStyle="#000000";
 c.strokeRect(10, 10, 370, 30);
 
-c.fillStyle="#f2f2f2";
-c.fillRect(15, 5, 10, 40);
-c.strokeStyle="#000000";
-c.strokeRect(10, 10, 370, 30);
+
+const canvas2 = document.getElementById('bar');
+canvas2.width = window.innerWidth;
+canvas2.height = window.innerHeight;
+
+const c2 = canvas2.getContext('2d');
+
+
+//
+// c2.fillStyle="#f2f2f2";
+// c2.fillRect(15, 5, 10, 40);
+// c2.strokeStyle="#000000";
+// c2.strokeRect(15, 5, 10, 40);
+
+let x = 10;
+let dx = 1;
 
 function animate() {
   requestAnimationFrame(animate);
+  c2.clearRect(0, 0, innerWidth, innerHeight);
+  c2.fillStyle="#f2f2f2";
+  c2.fillRect(x, 5, 10, 40);
+  c2.strokeStyle="black";
+  c2.strokeRect(x, 5, 10, 40);
 
+  x += dx;
 }
 
 animate();
+//
+//
+//
+//
+
+
+
+
+
+//

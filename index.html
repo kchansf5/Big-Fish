@@ -6,16 +6,18 @@
   <body>
     <h1>Big Fish</h1>
     <style media="screen" type="text/css">
-      canvas {
+      canvas #bar-bg {
         border: 1px solid black;
         background-color: lightgray;
       }
-      body {
-        margin: 0;
-      }
+      body { margin: 0; }
+
     </style>
-    <canvas id="canvas"></canvas>
-    <script type="application/javascript" src="canvas.js">
-    </script>
+
+    <canvas id="bar" style="position: absolute; z-index: 1;"></canvas>
+    <canvas id="bar-bg" style="position: absolute; z-index: 0;"></canvas>
+
+    <script type="application/javascript" src="canvas.js"></script>
+    <script type="application/javascript" src="accuracy_bar.js"></script>
   </body>
 </html>
