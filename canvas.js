@@ -46,8 +46,8 @@ const c2 = canvas2.getContext('2d');
 // c2.strokeStyle="#000000";
 // c2.strokeRect(15, 5, 10, 40);
 
-let x = 10;
-let dx = 1;
+let x = 185;
+let dx = 2.5;
 
 function animate() {
   requestAnimationFrame(animate);
@@ -56,6 +56,10 @@ function animate() {
   c2.fillRect(x, 5, 10, 40);
   c2.strokeStyle="black";
   c2.strokeRect(x, 5, 10, 40);
+
+  if (x > 370 || x < 10) {
+    dx = -dx;
+  }
 
   x += dx;
 }
