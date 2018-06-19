@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Big Fish</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
@@ -14,10 +15,15 @@
 
     </style>
 
-    <canvas id="bar" style="position: absolute; z-index: 1;"></canvas>
-    <canvas id="bar-bg" style="position: absolute; z-index: 0;"></canvas>
+    <div class="entire-bar">
+      <canvas id="bar" style="position: absolute; z-index: 1;"></canvas>
+      <canvas id="bar-bg" style="position: absolute; z-index: 0;"></canvas>
+    </div>
 
-    <script type="application/javascript" src="canvas.js"></script>
+    <div id="success">
+
+    </div>
+
     <script type="application/javascript" src="accuracy_bar.js"></script>
   </body>
 </html>
