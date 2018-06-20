@@ -1,7 +1,7 @@
 
 //initial position and speed
 let x = 25;
-let dx = 2.5;
+let dx = 3;
 
 
 window.addEventListener('keydown', (event) => {
@@ -11,7 +11,7 @@ window.addEventListener('keydown', (event) => {
     pauseAnimation();
     success.innerText = "";
 
-    if (x > 125 && x < 235) {
+    if (x >= 129 && x <= 225) {
       success.innerText = "You got one!";
     } else {
       success.innerText = "No fish yet.";
@@ -35,7 +35,8 @@ const c2 = canvas2.getContext('2d');
 
 const bar = new Image();
 bar.addEventListener('load', function() {
-  c2.drawImage(bar, 25, 5, 15, 40);
+  // c2.drawImage(bar, 177, 5, 15, 40);
+  c2.drawImage(bar, 177, 5, 15, 40);
 }, false);
 bar.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/images/timingbarbar.png";
 
