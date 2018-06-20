@@ -1,7 +1,7 @@
 
 //initial position and speed
 let x = 25;
-let dx = 3;
+let dx = 2.5;
 
 
 window.addEventListener('keydown', (event) => {
@@ -25,38 +25,6 @@ const pauseAnimation = () => {
   window.paused = window.paused ? false : true;
 };
 
-// const canvas = document.getElementById("bar-bg");
-// canvas.width = 360;
-// canvas.height = 50;
-//
-// const c = canvas.getContext('2d');
-
-
-//set color constants
-
-// const green = "#50ff35";
-// const yellow = "#f2f241";
-// const red = "#ff3434";
-//
-// //accuracy bar background gradient
-// const gradient = c.createLinearGradient(10,0,350,0);
-// gradient.addColorStop(0, red);
-// gradient.addColorStop(0.2, red);
-// gradient.addColorStop(0.35, yellow);
-// gradient.addColorStop(0.495, green);
-// gradient.addColorStop(0.5, green);
-// gradient.addColorStop(0.505, green);
-// gradient.addColorStop(0.65, yellow);
-// gradient.addColorStop(0.8, red);
-// gradient.addColorStop(1.0, red);
-
-// c.fillStyle = gradient;
-// c.fillRect(10, 10, 350, 30);
-// c.strokeStyle="#000000";
-// c.strokeRect(10, 10, 350, 30);
-
-
-
 //accuracy bar
 
 const canvas2 = document.getElementById('bar');
@@ -77,12 +45,7 @@ function animate() {
 
     c2.clearRect(0, 0, innerWidth, innerHeight);
     c2.drawImage(bar, x, 5, 15, 40);
-    // c2.clearRect(0, 0, innerWidth, innerHeight);
-    // c2.fillStyle="url('/Users/Ken/Desktop/a:A/javascript_project/big_fish/images/timingbarbar.png')";
-    // c2.fillRect(x, 5, 10, 40);
-    // c2.strokeStyle="black";
-    // c2.strokeRect(x, 5, 1, 40);
-    // c2.bar;
+
     if (x > 335 || x < 25) {
       dx = -dx;
     }
