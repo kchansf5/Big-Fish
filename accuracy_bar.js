@@ -6,7 +6,7 @@ const yellow = "#f2f241";
 const red = "#ff3434";
 
 let x = 125;
-let dx = 3;
+let dx = 7;
 
 
 window.addEventListener('keydown', (event) => {
@@ -14,11 +14,12 @@ window.addEventListener('keydown', (event) => {
   let success = document.getElementById('success');
   if (event.keyCode === 32) {
     pauseAnimation();
+    success.innerText = "";
     if (x > 160 && x < 200) {
-      success.innerText = "success";
+      success.innerText = "You got one!";
       // console.  log(x);
     } else {
-      success.innerText = "";
+      success.innerText = "No fish yet.";
     }
   }
 });
