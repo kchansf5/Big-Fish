@@ -25,8 +25,11 @@ img#bg {
 #success {
   position: absolute;
   margin-top: 250px;
-  margin-left: 450px;
+  margin-left: 420px;
   font-size: 25px;
+  font-family: sans-serif;
+  color: orange;
+  font-weight: bold;
 }
 .entire-bar {
     /* margin-left: 348px; */

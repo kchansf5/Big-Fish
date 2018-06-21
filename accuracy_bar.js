@@ -7,14 +7,19 @@ let dx = 3;
 window.addEventListener('keydown', (event) => {
   let success = document.getElementById('success');
   if (event.keyCode === 32) {
-    console.log(x);
+    // console.log(x);
     pauseAnimation();
     success.innerText = "";
 
+    let speedMultiplier = 1.1;
     if (x >= 129 && x <= 225) {
       success.innerText = "You got one!";
+      dx *= speedMultiplier;
+      console.log(dx);
+
     } else {
-      success.innerText = "No fish yet.";
+      success.innerText = "Game Over.";
+      dx = 3;
     }
   }
 });
@@ -40,6 +45,8 @@ bar.addEventListener('load', function() {
 }, false);
 bar.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/images/timingbarbar.png";
 
+const multiplier = 1;
+
 function animate() {
   if (!window.paused) {
     requestAnimationFrame(animate);
@@ -50,8 +57,8 @@ function animate() {
     if (x > 335 || x < 25) {
       dx = -dx;
     }
-
-    x += (2 * dx);
+    dx *= 1;
+    x += dx;
   } else {
     requestAnimationFrame(animate);
   }
