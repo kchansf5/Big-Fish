@@ -1,6 +1,19 @@
 //enter to start
 //'f' to start fishing
 //'space' to stop fishing
+const canvas = document.getElementById('result');
+canvas.width = 340;
+canvas.height = 200;
+
+const c = canvas.getContext('2d');
+
+
+
+const canvas2 = document.getElementById('bar');
+canvas2.width = 340;
+canvas2.height = 50;
+
+const c2 = canvas2.getContext('2d');
 
 //initial position and speed
 let x = 25;
@@ -24,7 +37,7 @@ window.addEventListener('keydown', (event) => {
     result.innerText = "";
 
     let speedMultiplier = 1.1;
-    if (x >= 129 && x <= 225) {
+    if (x >= 141 && x <= 183) {
       dx *= speedMultiplier;
       // console.log(dx);
       if (window.paused) {
@@ -36,7 +49,9 @@ window.addEventListener('keydown', (event) => {
 
       initial = false;
     } else if (initial !== true) {
-      result.innerText = "Game Over.";
+      c.font = "50x Georgia";
+      c.fillText('GAME OVER', 140, 10);
+      // result.innerText = "Game Over.";
       dx = 3;
       console.log('lost', x);
       x = 25;
@@ -48,26 +63,20 @@ window.addEventListener('keydown', (event) => {
   }
 });
 
-
-
-//accuracy bar
-
-const canvas2 = document.getElementById('bar');
-canvas2.width = 370;
-canvas2.height = 50;
-
-const c2 = canvas2.getContext('2d');
-
 //draw the white bar
 const bar = new Image();
 bar.addEventListener('load', function() {
-  c2.drawImage(bar, 177, 5, 15, 40);
+  //right limit is 335
+  //left limit is 5
+  c2.drawImage(bar, 162, 5, 15, 40);
+  // c2.drawImage(bar, 177, 5, 15, 40);
 }, false);
 bar.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/images/timingbarbar.png";
 
-const multiplier = 1;
-
 function animate() {
+  if(x >= 141 && x <= 183) {
+    console.log("this should be winning",x);
+  }
   if (!window.paused) {
     requestAnimationFrame(animate);
 
@@ -75,11 +84,13 @@ function animate() {
     c2.drawImage(bar, x, 5, 15, 40);
 
     //bounce the bar back when it reaches the end of the meter
-    if (x > 335 || x < 25) {
+    if (x > 315 || x < 10) {
+      console.log('end', x);
       dx = -dx;
     }
     x += dx;
   } else {
+
     requestAnimationFrame(animate);
   }
 }

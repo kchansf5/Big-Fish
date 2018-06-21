@@ -10,13 +10,10 @@ h1 {
   margin: auto;
 }
 
-/*.entire-bar {
-  position: absolute;
-  margin-top: 200px;
-  margin-left: 320px;
-  z-index: 0;
-}*/
-
+.game {
+  display: flex;
+  justify-content: center;
+}
 img#bg {
     width: 1000px;
     height: 500px;
@@ -24,31 +21,24 @@ img#bg {
 
 #result {
   position: absolute;
-  margin-top: 250px;
-  margin-left: 420px;
-  font-size: 25px;
-  font-family: sans-serif;
-  color: orange;
-  font-weight: bold;
+  border: 1px solid red;
+  top: 200px;
 }
 .entire-bar {
-    /* margin-left: 348px; */
-    /* margin-top: 302px; */
-    position: relative;
-    top: 300px;
-    left: 340px;
+  position: relative;
+  top: 300px;
+  left: 340px;
 }
 
 img#timing-bar {
-  width: 355px;
+  width: 340px;
   height: 30px;
   position: absolute;
-  margin-left: -23px;
-  margin-top: 10px;
+  /*border: 1px solid;*/
 }
 
 canvas#bar{
   position: absolute;
-  z-index: 1;
-  margin-left: -30px;
+  top: -10px;
+  /*border: 1px solid red;*/
 }
