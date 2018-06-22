@@ -1,6 +1,10 @@
-//enter to start
-//'f' to start fishing
-//'space' to stop fishing
+
+window.onkeydown = function(e) {
+  if (e.keyCode === 32 && e.target === document.body) {
+    e.preventDefault();
+  }
+};
+
 const canvas = document.getElementById('result');
 canvas.width = 540;
 canvas.height = 200;
