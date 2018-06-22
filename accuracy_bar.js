@@ -77,7 +77,7 @@ window.addEventListener('keydown', (event) => {
     music.loop = true;
     c.clearRect(0,0,canvas.width,canvas.height);
 
-    let speedMultiplier = 1.125;
+    let speedMultiplier = 1.120;
     if (x >= 140 && x <= 184) {
       dx *= speedMultiplier;
       // console.log(dx);
