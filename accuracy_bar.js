@@ -9,12 +9,24 @@
 //   document.getElementById("bg_music").play();
 // };
 
+let mutecount = 0;
 window.onkeydown = function(e) {
   if (e.keyCode === 32 && e.target === document.body) {
     e.preventDefault();
   }
   if (e.keyCode === 77) {
-    music.volume = 0;
+    mutecount += 1;
+
+    if (mutecount % 2 === 1) {
+      music.volume = 0;
+      catchsound.volume =0;
+      lose.volume = 0;
+    } else {
+      music.volume = 0.5;
+      catchsound.volume = 0.35;
+      lose.volume = 0.5;
+    }
+
   }
 };
 
@@ -50,9 +62,10 @@ const music = new Audio("./assets/music/bg-track.mp3");
 music.volume = 0.5;
 
 const catchsound = new Audio("./assets/music/catch.wav");
-catchsound.volume = 0.25;
+catchsound.volume = 0.35;
 
 const lose = new Audio ("./assets/music/lose.wav");
+lose.volume = 0.5;
 
 
 window.addEventListener('keydown', (event) => {
@@ -92,14 +105,12 @@ window.addEventListener('keydown', (event) => {
       initial = false;
     } else if (initial !== true) {
 
-
-      const gameover = new Image();
-      gameover.addEventListener('load', function() {
-
-        c.drawImage(gameover, 110, 80, 320, 80);
-      }, false);
       lose.play();
       music.pause();
+      const gameover = new Image();
+      gameover.addEventListener('load', function() {
+        c.drawImage(gameover, 110, 80, 320, 80);
+      }, false);
       gameover.src = "./assets/images/game-over-01.png";
 
       dx = 3;
