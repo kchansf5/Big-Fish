@@ -3,9 +3,13 @@
   src: url(./assets/fonts/ka1.ttf);
 }
 
-.test {
+.instructions {
+  display: flex;
   font-family: ka;
+  font-size: 13px;
+  justify-content: center;
 }
+
 h1 {
   font-family: sans-serif;
   margin: auto;
@@ -19,6 +23,7 @@ h1 {
 }
 
 .game {
+  padding-top: 10px;
   display: flex;
   justify-content: center;
 }

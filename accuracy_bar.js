@@ -48,7 +48,7 @@ window.addEventListener('keydown', (event) => {
 
         const nice = new Image();
         nice.addEventListener('load', function() {
-          c.drawImage(nice, 130, 10, 265, 70);
+          c.drawImage(nice, 130, 25, 265, 70);
         }, false);
         nice.src = "./assets/images/nice-catch.png";
 
@@ -57,7 +57,7 @@ window.addEventListener('keydown', (event) => {
         // c.lineWidth = 3;
         // c.strokeStyle = "none";
         // c.fillStyle = "white";
-        c.fillText(score, 248, 120);
+        c.fillText(score, 248, 135);
         // c.strokeText(score, 300, 120);
       }
       console.log(x);
