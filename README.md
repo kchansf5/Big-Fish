@@ -11,7 +11,7 @@ Check out the [Live Demo](https://kchansf5.github.io/big-fish/)
 
 Big Fish is a simple and addicting timing game with a pixel-art retro theme. The objective of the game is to catch as many fish as possible in a row.
 
-![](./assets/open_screen.png)
+![](https://github.com/kchansf5/big-fish/blob/master/assets/images/open_screen.png)
 
 ## Gameplay
 
@@ -19,7 +19,8 @@ Gameplay is extremely simple. A player activates the timing bar by pressing on t
 
 Difficulty of the game increases as consecutive fish are caught. Logic is built into the animation function of the game so that the timing bar will increasing in velocity after each successful catch.
 
-![](image url)
+![](https://github.com/kchansf5/big-fish/blob/master/assets/images/nice-catch.png)
+![](https://github.com/kchansf5/big-fish/blob/master/assets/images/lose_screen.png)
 
 ## Future Improvements
 There are several features and improvements that I would like to make to Big Fish in the future. Some of these include:
