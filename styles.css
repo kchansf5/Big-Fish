@@ -22,7 +22,7 @@ img#bg {
 #result {
   position: absolute;
   border: 1px solid red;
-  top: 200px;
+  top: 150px;
 }
 .entire-bar {
   position: relative;
@@ -41,4 +41,10 @@ canvas#bar{
   position: absolute;
   top: -10px;
   /*border: 1px solid red;*/
+}
+
+.entire-bar {
+    position: relative;
+    top: 300px;
+    left: 329.5px;
 }

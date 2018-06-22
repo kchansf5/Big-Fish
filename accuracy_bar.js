@@ -29,12 +29,15 @@ const pauseAnimation = () => {
 
 let initial = true;
 
+
+
+
 window.addEventListener('keydown', (event) => {
   let result = document.getElementById('result');
 
   if (event.keyCode === 32) {
     pauseAnimation();
-    result.innerText = "";
+    c.clearRect(0,0,canvas.width,canvas.height);
 
     let speedMultiplier = 1.1;
     if (x >= 141 && x <= 183) {
@@ -42,15 +45,28 @@ window.addEventListener('keydown', (event) => {
       // console.log(dx);
       if (window.paused) {
         score += 1;
-        result.innerText = `You got ${score}!`;
+
+        const nice = new Image();
+        nice.addEventListener('load', function() {
+          c.drawImage(nice, 40, 80, 265, 70);
+        }, false);
+        nice.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/images/nice-catch.png";
+
+        c.font = "20px Georgia";
+        c.fillText(`You got ${score}!`, 140, 30);
       }
       console.log(x);
       console.log(score);
 
       initial = false;
     } else if (initial !== true) {
-      c.font = "50x Georgia";
-      c.fillText('GAME OVER', 140, 10);
+
+      const gameover = new Image();
+      gameover.addEventListener('load', function() {
+        c.drawImage(gameover, 40, 80, 265, 40);
+      }, false);
+      gameover.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/images/game-over-01.png";
+
       // result.innerText = "Game Over.";
       dx = 3;
       console.log('lost', x);
@@ -66,10 +82,7 @@ window.addEventListener('keydown', (event) => {
 //draw the white bar
 const bar = new Image();
 bar.addEventListener('load', function() {
-  //right limit is 335
-  //left limit is 5
   c2.drawImage(bar, 162, 5, 15, 40);
-  // c2.drawImage(bar, 177, 5, 15, 40);
 }, false);
 bar.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/images/timingbarbar.png";
 
