@@ -2,7 +2,7 @@
 //'f' to start fishing
 //'space' to stop fishing
 const canvas = document.getElementById('result');
-canvas.width = 340;
+canvas.width = 540;
 canvas.height = 200;
 
 const c = canvas.getContext('2d');
@@ -39,8 +39,8 @@ window.addEventListener('keydown', (event) => {
     pauseAnimation();
     c.clearRect(0,0,canvas.width,canvas.height);
 
-    let speedMultiplier = 1.1;
-    if (x >= 141 && x <= 183) {
+    let speedMultiplier = 1.05;
+    if (x >= 140 && x <= 184) {
       dx *= speedMultiplier;
       // console.log(dx);
       if (window.paused) {
@@ -48,12 +48,17 @@ window.addEventListener('keydown', (event) => {
 
         const nice = new Image();
         nice.addEventListener('load', function() {
-          c.drawImage(nice, 40, 80, 265, 70);
+          c.drawImage(nice, 130, 10, 265, 70);
         }, false);
-        nice.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/images/nice-catch.png";
+        nice.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/assets/images/nice-catch.png";
 
-        c.font = "20px Georgia";
-        c.fillText(`You got ${score}!`, 140, 30);
+        c.font = "50px ka";
+        c.fillStyle = "black";
+        // c.lineWidth = 3;
+        // c.strokeStyle = "none";
+        // c.fillStyle = "white";
+        c.fillText(score, 248, 120);
+        // c.strokeText(score, 300, 120);
       }
       console.log(x);
       console.log(score);
@@ -63,9 +68,9 @@ window.addEventListener('keydown', (event) => {
 
       const gameover = new Image();
       gameover.addEventListener('load', function() {
-        c.drawImage(gameover, 40, 80, 265, 40);
+        c.drawImage(gameover, 110, 80, 320, 80);
       }, false);
-      gameover.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/images/game-over-01.png";
+      gameover.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/assets/images/game-over-01.png";
 
       // result.innerText = "Game Over.";
       dx = 3;
@@ -84,7 +89,7 @@ const bar = new Image();
 bar.addEventListener('load', function() {
   c2.drawImage(bar, 162, 5, 15, 40);
 }, false);
-bar.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/images/timingbarbar.png";
+bar.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/assets/images/timingbarbar.png";
 
 function animate() {
   if(x >= 141 && x <= 183) {

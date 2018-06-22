@@ -1,3 +1,11 @@
+@font-face {
+  font-family: ka;
+  src: url(/Users/Ken/Desktop/a:A/javascript_project/big_fish/assets/fonts/ka1.ttf);
+}
+
+.test {
+  font-family: ka;
+}
 h1 {
   font-family: sans-serif;
   margin: auto;
@@ -21,7 +29,6 @@ img#bg {
 
 #result {
   position: absolute;
-  border: 1px solid red;
   top: 150px;
 }
 .entire-bar {
