@@ -21,7 +21,9 @@ canvas.height = 200;
 
 const c = canvas.getContext('2d');
 
-
+function mute() {
+  music.volume === 0;
+}
 
 const canvas2 = document.getElementById('bar');
 canvas2.width = 340;
@@ -52,6 +54,7 @@ window.addEventListener('keydown', (event) => {
   if (event.keyCode === 32) {
     pauseAnimation();
     music.play();
+    music.loop = true;
     c.clearRect(0,0,canvas.width,canvas.height);
 
     let speedMultiplier = 1.05;
