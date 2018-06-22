@@ -19,7 +19,7 @@ Gameplay is extremely simple. A player activates the timing bar by pressing on t
 
 Difficulty of the game increases as consecutive fish are caught. Logic is built into the animation function of the game so that the timing bar will increasing in velocity after each successful catch.
 
-![](https://github.com/kchansf5/big-fish/blob/master/assets/images/nice-catch.png)
+![](https://github.com/kchansf5/big-fish/blob/master/assets/images/catch_screenshot.png)
 ![](https://github.com/kchansf5/big-fish/blob/master/assets/images/lose_screen.png)
 
 ## Future Improvements
