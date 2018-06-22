@@ -25,6 +25,7 @@ Difficulty of the game increases as consecutive fish are caught. Logic is built 
 ## Future Improvements
 There are several features and improvements that I would like to make to Big Fish in the future. Some of these include:
 
+* Canvas sizing and logic for timing bar velocity needs improvement 
 * Additional animations on successful catches incorporating the use of sprites - perhaps a fish jumping out of water
 * New levels of difficulty and exploration with item selection availability - different types of equipment such as various rods, hooks, and fishing bait
 * Different types of fish species to catch and store in a fishing log
