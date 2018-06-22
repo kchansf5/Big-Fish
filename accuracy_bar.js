@@ -89,7 +89,7 @@ const bar = new Image();
 bar.addEventListener('load', function() {
   c2.drawImage(bar, 162, 5, 15, 40);
 }, false);
-bar.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/assets/images/timingbarbar.png";
+bar.src = "./assets/images/timingbarbar.png";
 
 function animate() {
   if(x >= 141 && x <= 183) {
