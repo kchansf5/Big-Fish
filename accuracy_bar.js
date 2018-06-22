@@ -50,7 +50,7 @@ window.addEventListener('keydown', (event) => {
         nice.addEventListener('load', function() {
           c.drawImage(nice, 130, 10, 265, 70);
         }, false);
-        nice.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/assets/images/nice-catch.png";
+        nice.src = "./assets/images/nice-catch.png";
 
         c.font = "50px ka";
         c.fillStyle = "black";
@@ -70,7 +70,7 @@ window.addEventListener('keydown', (event) => {
       gameover.addEventListener('load', function() {
         c.drawImage(gameover, 110, 80, 320, 80);
       }, false);
-      gameover.src = "/Users/Ken/Desktop/a:A/javascript_project/big_fish/assets/images/game-over-01.png";
+      gameover.src = "./assets/images/game-over-01.png";
 
       // result.innerText = "Game Over.";
       dx = 3;
