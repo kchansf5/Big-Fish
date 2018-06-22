@@ -3,6 +3,31 @@
   src: url(./assets/fonts/ka1.ttf);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-top: 20px;
+  width: 880px;
+}
+
+img.linkedin {
+  height: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+img.github {
+  height: 20px;
+  margin-top: 10px;
+}
+
 .instructions {
   display: flex;
   font-family: ka;
