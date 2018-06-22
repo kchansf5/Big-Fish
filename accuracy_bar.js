@@ -13,17 +13,17 @@ window.onkeydown = function(e) {
   if (e.keyCode === 32 && e.target === document.body) {
     e.preventDefault();
   }
+  if (e.keyCode === 77) {
+    music.volume = 0;
+  }
 };
+
 
 const canvas = document.getElementById('result');
 canvas.width = 540;
 canvas.height = 200;
 
 const c = canvas.getContext('2d');
-
-function mute() {
-  music.volume === 0;
-}
 
 const canvas2 = document.getElementById('bar');
 canvas2.width = 340;
@@ -47,6 +47,13 @@ let initial = true;
 
 
 const music = new Audio("./assets/music/bg-track.mp3");
+music.volume = 0.5;
+
+const catchsound = new Audio("./assets/music/catch.wav");
+catchsound.volume = 0.25;
+
+const lose = new Audio ("./assets/music/lose.wav");
+
 
 window.addEventListener('keydown', (event) => {
   let result = document.getElementById('result');
@@ -62,6 +69,7 @@ window.addEventListener('keydown', (event) => {
       dx *= speedMultiplier;
       // console.log(dx);
       if (window.paused) {
+        catchsound.play();
         score += 1;
 
         const nice = new Image();
@@ -83,11 +91,15 @@ window.addEventListener('keydown', (event) => {
 
       initial = false;
     } else if (initial !== true) {
-      music.pause();
+
+
       const gameover = new Image();
       gameover.addEventListener('load', function() {
+
         c.drawImage(gameover, 110, 80, 320, 80);
       }, false);
+      lose.play();
+      music.pause();
       gameover.src = "./assets/images/game-over-01.png";
 
       dx = 3;
